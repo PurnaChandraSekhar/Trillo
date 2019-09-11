@@ -133,11 +133,25 @@
      list-style: none;
      margin-top: 3.5rem;
 
+     @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+        
+    }
+
     &__item {
      position: relative;
 
+     @media only screen and (max-width: $bp-medium) {
+        flex: 1;
+    }
+
      &:not(:last-child) {
          margin-bottom: .5rem;
+
+         @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 0;
+        }
      }
     }
 
@@ -180,6 +194,10 @@
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+        }
+
     }
 
     &__icon-box {
@@ -198,6 +216,12 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+   display: none;
+
+    
+}
 
 }
 
@@ -388,14 +412,6 @@
     align-items: center;
     justify-content: space-between;
 
-    &__count {
-
-    }
-
-    &__friends{
-
-    }
-
     &__photo {
         box-sizing: content-box;
         height: 4rem;
@@ -405,7 +421,7 @@
 
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -429,11 +445,6 @@
     &__caption {
         display: flex;
         align-items: center;
-    }
-
-    &__user{
-
-
     }
 
     &__photo {
@@ -477,4 +488,68 @@
         z-index: 1;
         
     }
+}
+
+/////////////////////////////////////////
+//// CALL TO ACTION 
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/////////////////////////////////////////
+//// BUTTON
+.btn {
+     font-size: 1.5rem;
+     position: relative;
+     border: none;
+     text-transform: uppercase;
+     border-radius: 100px;
+     font-weight: 300;
+     background-image: linear-gradient(to right, var(--color-primary-light) , var(--color-primary-dark));
+     color: #fff;
+     overflow: hidden;
+     cursor: pointer;
+
+     & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+     }
+
+     &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light) , var(--color-primary-dark));
+     }
+    
+     &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+       position: absolute;
+       padding: 2rem 0;   
+       left: 0;
+       top: -100%;   
+    }
+
+    &:hover &__visible  {
+          transform: translateY(100%);
+        }
+
+    &:hover &__invisible {       
+             top: 0;
+        }
+
+    &:focus {
+        outline: none;
+        animation: anim 1s infinite;
+    }    
 }

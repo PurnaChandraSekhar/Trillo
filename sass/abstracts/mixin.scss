@@ -1,0 +1,33 @@
+/////////////////////////////////////////
+//// MEDIA QUERY MANAGER 
+// 10px = 1rem, 10px/16px = 0.625, 0.625*600px = 375, 375/1rem = 37.5rem;
+// 10px = 1rem, 10px/16px = 0.625, 0.625*900px = 375, 900/1rem = 56.25rem;
+// 10px = 1rem, 10px/16px = 0.625, 0.625*1200px = 750, 750/1rem =75rem;
+// 10px = 1rem, 10px/16px = 0.625, 0.625*1800px = 1125, 1125/1rem = 112.5rem;
+
+// @mixin respond ($breakPoint) {
+//     @if $breakPoint == phone { 
+//         @media only screen and (max-width: 37.5em) {
+//             @content
+//         };  
+//     }
+    
+//     @if $breakPoint == tab-port { 
+//         @media only screen and (max-width: 56.25em) {
+//             @content
+//         } ;
+//     }
+    
+   
+//     @if $breakPoint == tab-land {
+//         @media only screen and (max-width: 75em) {
+//             @content
+//         };  
+//     }
+
+//     @if $breakPoint == desktop { 
+//         @media only screen and (min-width: 112.5em) {
+//             @content
+//         };  
+//     }
+// }
